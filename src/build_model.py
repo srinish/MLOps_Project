@@ -7,7 +7,7 @@ import pickle
 import os
 import mlflow 
 import yaml
-from src.model_utils import load_data, save_model, load_model, split_data
+from model_utils import load_data, save_model, load_model, split_data
 from mlflow.sklearn import log_model
 from mlflow.models import infer_signature
 
@@ -76,7 +76,7 @@ def main():
         mlflow.log_metric("accuracy", accuracy)  # Example metric, replace with actual value
         mlflow.log_artifact(model_file_path, artifact_path="models")
         mlflow.log_artifact(data_file_path, artifact_path="data")
-        mlflow.log_artifact("model_params.yaml", artifact_path="params")
+        mlflow.log_artifact("../config/model_params.yaml", artifact_path="params")
         mlflow.log_artifact("build_model.py", artifact_path="scripts")
 
         mlflow.sklearn.log_model(model, "Logistic_Regression_Model", signature=signature)

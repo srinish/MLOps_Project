@@ -1,6 +1,6 @@
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import accuracy_score, classification_report, mean_squared_error, r2_score
-from src.model_utils import load_data, save_model, load_model, split_data
+from model_utils import load_data, save_model, load_model, split_data
 import yaml
 import mlflow
 import pandas as pd

@@ -54,7 +54,7 @@ def run_mlflow_experiment(model, X_train, y_train, X_test, y_test, params, model
         mlflow.log_metric("r2_score", r2)
         mlflow.log_artifact(model_file_path, artifact_path="models")
         mlflow.log_artifact(data_file_path, artifact_path="data")
-        mlflow.log_artifact("model_params.yaml", artifact_path="params")
+        mlflow.log_artifact("../config/model_params.yaml", artifact_path="params")
         mlflow.log_artifact("rfg_build_model.py", artifact_path="scripts")
 
         # Log the model
