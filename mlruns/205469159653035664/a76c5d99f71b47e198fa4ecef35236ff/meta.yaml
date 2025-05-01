@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/mala/pgaiml/MLOps_Project/mlruns/205469159653035664/a76c5d99f71b47e198fa4ecef35236ff/artifacts
+end_time: 1745869916688
+entry_point_name: ''
+experiment_id: '205469159653035664'
+lifecycle_stage: active
+run_id: a76c5d99f71b47e198fa4ecef35236ff
+run_name: unleashed-hawk-583
+run_uuid: a76c5d99f71b47e198fa4ecef35236ff
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745869916676
+status: 3
+tags: []
+user_id: mala

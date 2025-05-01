@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/mala/pgaiml/MLOps_Project/mlruns/205469159653035664/ad3a80f016134079927534169d50a191/artifacts
+end_time: 1745869923083
+entry_point_name: ''
+experiment_id: '205469159653035664'
+lifecycle_stage: active
+run_id: ad3a80f016134079927534169d50a191
+run_name: nimble-shrimp-756
+run_uuid: ad3a80f016134079927534169d50a191
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745869916694
+status: 3
+tags: []
+user_id: mala
