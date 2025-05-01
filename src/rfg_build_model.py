@@ -1,6 +1,6 @@
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import accuracy_score, classification_report, mean_squared_error, r2_score
-from model_utils import load_data, save_model, load_model, split_data
+from src.model_utils import load_data, save_model, load_model, split_data
 import yaml
 import mlflow
 import pandas as pd
@@ -55,11 +55,11 @@ def assign_alias_to_stage(model_name, stage, alias):
 # Update the main function
 def main(): 
     # Define file paths
-    data_file_path = './data/dataset_v1.csv'
-    model_file_path = 'random_forest_model.pkl'
+    data_file_path = '../data/dataset_v1.csv'
+    model_file_path = '../random_forest_model.pkl'
 
     # Load parameters from YAML file
-    with open("model_params.yaml", "r") as file:
+    with open("../config/model_params.yaml", "r") as file:
         params = yaml.safe_load(file)["random_forest"]
 
     # Load and preprocess data
@@ -77,14 +77,11 @@ def main():
 
     # Save the model
     save_model(model, model_file_path)
-
-
+    # Log the experiment with MLflow
+    # run_mlflow_experiment(model, X_train, y_train, X_test, y_test, params, model_file_path, data_file_path)
    
-    assign_alias_to_stage("sk-learn-random-forest-model", "Production", "champion")
+    # assign_alias_to_stage("sk-learn-random-forest-model", "Production", "champion")
 
-
-
-    
 
 
 

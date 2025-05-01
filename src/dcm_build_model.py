@@ -1,6 +1,6 @@
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import accuracy_score,  mean_squared_error, r2_score
-from model_utils import load_data, save_model, load_model, split_data
+from src.model_utils import load_data, save_model, load_model, split_data
 import yaml
 import mlflow
 import pandas as pd
@@ -32,10 +32,10 @@ def evaluate_regressor_model(model, X_test, y_test):
 def main(): 
     # Define file paths
     data_file_path = './data/dataset_v1.csv'
-    model_file_path = 'decision_tree_model.pkl'
+    model_file_path = '../models/decision_tree_model.pkl'
 
     # Load parameters from YAML file
-    with open("model_params.yaml", "r") as file:
+    with open("../config/model_params.yaml", "r") as file:
         params = yaml.safe_load(file)["decision_tree"]
 
     # Load and preprocess data

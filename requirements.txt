@@ -1,0 +1,17 @@
+# Core dependencies
+pandas==1.5.3
+numpy==1.24.2
+scikit-learn==1.2.2
+
+# MLflow for model tracking and deployment
+mlflow==2.4.1
+
+# WhyLabs for model monitoring
+whylogs==1.1.16
+whylabs-client==0.5.7
+
+# Requests for API interactions
+requests==2.31.0
+
+# PyYAML for configuration file handling
+PyYAML==6.0

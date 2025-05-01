@@ -7,7 +7,7 @@ import pickle
 import os
 import mlflow 
 import yaml
-from model_utils import load_data, save_model, load_model, split_data
+from src.model_utils import load_data, save_model, load_model, split_data
 from mlflow.sklearn import log_model
 from mlflow.models import infer_signature
 
@@ -35,11 +35,11 @@ def evaluate_model(model, X_test, y_test):
 # Define the main function
 def main(): 
     # Define file paths
-    data_file_path = './data/dataset_v1.csv'
-    model_file_path = 'logistic_regression_model.pkl'
+    data_file_path = '../data/dataset_v1.csv'
+    model_file_path = '../models/logistic_regression_model.pkl'
 
     # Load parameters from YAML file
-    with open("model_params.yaml", "r") as file:
+    with open("../config/model_params.yaml", "r") as file:
         params = yaml.safe_load(file)["logistic_regression"]
 
     # Load and preprocess data
